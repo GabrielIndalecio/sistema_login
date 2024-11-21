@@ -20,3 +20,5 @@ try{
 }catch(PDOException $e){
     die("Erro de conexao" .$e->getMessage());
 }
+
+?>
