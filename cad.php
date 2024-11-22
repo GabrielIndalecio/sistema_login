@@ -12,6 +12,8 @@ include 'conexao.php';
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = htmlspecialchars($_POST['email']); // Ele limpa os caracteres
 
+    $nome = htmlspecialchars($_POST['nome']);
+
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografa com o melhor jeito.
 
     //var_dump($email);
@@ -20,9 +22,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepara o comando SQL para inserir no banco de dados
         // Utilizar o Prepared para preverir injetar SQL
 
-        $smt = $conexao->prepare("INSERT INTO usuarios (email,senha) VALUES (:email, :senha)");
+        $smt = $conexao->prepare("INSERT INTO usuarios (email,nome,senha) VALUES (:email, :nome, :senha)");
 
         $smt->bindParam(":email",$email); //Vincula e limpa o EMAIL
+        $smt->bindParam(":nome",$nome);
         $smt->bindParam(":senha",$senha);
 
         $smt->execute();
