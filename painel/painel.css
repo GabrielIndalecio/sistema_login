@@ -3,11 +3,85 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.Principal{
+.Cabecario{
     position: absolute;
-    top: 10%;
-    left: 5%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    left: 0%;
+    
+
 }
+.Cabecario img{
+    position: absolute;
+    left: 3%;
+    width: 90px;
+    height: 90px;
+}
+.Cabecario h1{
+    position: absolute;
+    left: 9%;
+    top: -25%;
+    color: blueviolet;
+    font-size: 55px;
+}
+.botaosair{
+    position: absolute;
+    left: 90%;
+    top: 30%;
+    width: 4%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: darkred;
+    transition: transform 0.3s ease;
+}
+.botaosair:hover{
+    background-color: red;
+    transform: scale(1.1);
+    cursor: pointer;
+    border: none;
+    
+
+}
+.botaocategoria{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 5%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: blueviolet;
+    transition: transform 0.3s ease;
+}
+.botaocategoria:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.meio img {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    transition: transform 0.3s ease;
+}
+.meio img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.shampoo{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    transition: transform 0.3s ease;
+    color: white;
+}
+.shampoo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
